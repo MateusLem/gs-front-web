@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, #013f3a, #120b30);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    height: fit-content;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba(141, 173, 233, 0.161);
+}
+
+.logo {
+    width: fit-content;
+    height: 5rem;
+    padding: 1rem;
+}
+
+.button {
+    height: fit-content;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.nav-hidden {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: rgba(92, 215, 219, 0.2);
+    width: 60%;
+    padding: 10px;
+    z-index: 2;
+    align-self: center;
+    margin-top: 25%;
+}
+
+.container div {
+    z-index: 3;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, #120b30, #9c916a);
+    padding: 10px 0px;
+    width: 100%;
+    align-items: center;
+    height: 10rem;
+}
+
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menu-lateral a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    color: #f1f1f1;
+}
+
+.menu-lateral .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow-y: hidden;
+    top: 100vh;
+    left: 0;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -10vh;
+    background: #f1f1f1;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+    width: 4vw;
+    height: 4vw;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+    width: 2vw;
+    height: 2vw;
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+    width: 5vw;
+    height: 5vw;
+    left: 35%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+    width: 8vw;
+    height: 8vw;
+    left: 50%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(5) {
+    width: 3.5vw;
+    height: 3.5vw;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(6) {
+    width: 4.5vw;
+    height: 4.5vw;
+    left: 65%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(7) {
+    width: 9vw;
+    height: 9vw;
+    left: 70%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(8) {
+    width: 2.5vw;
+    height: 2.5vw;
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(9) {
+    width: 1.5vw;
+    height: 1.5vw;
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(10) {
+    width: 9vw;
+    height: 9vw;
+    left: 25%;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -10vh;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translate(10vw);
+    }
+    100% {
+        bottom: 100vh;
+        transform: translateX(-20vw);
+    }
+}
+
+
+.fish {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.fish img {
+    height: 10rem;
+    margin-bottom: 50px;
+}
+
+#fish1 {
+    
+    animation: swim 10s linear infinite;
+}
+
+#fish2 {
+    
+    transform: rotateY(180deg);
+    animation: swim-reverse 13s linear infinite;
+}
+
+#white-shark {
+    
+    animation: shark-swim 15s linear infinite;
+}
+
+#fish3 {
+    
+    animation: swim 15s linear infinite;
+}
+
+#squid-img {
+    height: 10rem;
+    animation: squid-swim 15s linear infinite;
+}
+
+@keyframes swim {
+    0% {
+        transform: translateX(-10vw);
+    }
+    10% {
+        transform: translateY(-25px) translateX(0vw);
+    }
+    30% {
+        transform: translateY(25px) translateX(20vw);
+    }
+    50% {
+        transform: translateY(-25px) translateX(40vw);
+    }
+    70% {
+        transform: translateY(25px) translateX(60vw);
+    }
+    80% {
+        transform: translateY(-25px) translateX(70vw);
+    }
+    100% {
+        transform: translateY(25px) translateX(120vw);
+    }
+}
+
+@keyframes swim-reverse {
+    0% {
+        transform: translateX(110vw) rotateY(180deg);
+    }
+    10% {
+        transform: translateY(-25px) translateX(100vw) rotateY(180deg);
+    }
+    30% {
+        transform: translateY(25px) translateX(80vw) rotateY(180deg);
+    }
+    50% {
+        transform: translateY(-25px) translateX(60vw) rotateY(180deg);
+    }
+    70% {
+        transform: translateY(25px) translateX(40vw) rotateY(180deg);
+    }
+    80% {
+        transform: translateY(-25px) translateX(30vw) rotateY(180deg);
+    }
+    100% {
+        transform: translateY(25px) translateX(-20vw) rotateY(180deg);
+    }
+}
+
+@keyframes shark-swim {
+    0% {
+        transform: translateX(-10vw);
+    }
+    10% {
+        transform: translateX(0vw);
+    }
+    30% {
+        transform: translateY(25px) translateX(15vw);
+    }
+    50% {
+        transform: translateX(30vw);
+    }
+    70% {
+        transform: translateY(25px) translateX(45vw);
+    }
+    80% {
+        transform: translateX(60vw);
+    }
+    100% {
+        transform: translateY(25px) translateX(100vw);
+    }
+}
+
+@keyframes squid-swim {
+    0% {
+        transform: translateX(110vw);
+    }
+    25% {
+        transform: translateX(100vw);
+    }
+    50% {
+        transform: translateX(60vw);
+    }
+    75% {
+        transform: translateX(30vw);
+    }
+    100% {
+        transform: translateX(-20vw);
+    }
+}
+
+#crx-root-main {
+    display: none !important;
+}
