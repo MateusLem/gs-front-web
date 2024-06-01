@@ -61,29 +61,31 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: relative;
     z-index: 2;
     background-size: cover;
     background-position: center;
 }
-
-.container {
-    background-color: rgba(92, 215, 219, 0.2);
-    width: 60%;
-    padding: 10px;
-    z-index: 2;
-    align-self: center;
-    margin-top: 25%;
-}
-
-.container div {
-    z-index: 3;
-}
-
-.content {
+.content{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+
+.content-section div {
+    z-index: 3;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(92, 215, 219, 0.2);
+    width: 60%;
+    padding: 10px;
+    align-self: center;
+    margin-top: 25%;
+    z-index: 2;
 }
 
 footer {
@@ -95,8 +97,8 @@ footer {
 }
 
 .menu-lateral {
-    height: 100%;
-    width: 0;
+    height: 100vh;
+    width: 100vw;
     position: fixed;
     z-index: 5;
     top: 0;
@@ -128,99 +130,103 @@ footer {
     margin-left: 50px;
 }
 
-.bubbles {
-    position: absolute;
+.sea-animation {
+    position: relative;
     width: 100%;
     height: 100%;
-    z-index: 0;
-    overflow-y: hidden;
-    top: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
     left: 0;
 }
 
 .bubble {
-    position: absolute;
-    bottom: -10vh;
+    position: relative;
+    bottom: -100px;
+    width: 40px;
+    height: 40px;
     background: #f1f1f1;
     border-radius: 50%;
     opacity: 0.5;
-    animation: rise 10s infinite ease-in;
+    animation: rise 20s infinite ease-in;
 }
 
 .bubble:nth-child(1) {
-    width: 4vw;
-    height: 4vw;
+    width: 40px;
+    height: 40px;
     left: 10%;
     animation-duration: 8s;
+
 }
 
 .bubble:nth-child(2) {
-    width: 2vw;
-    height: 2vw;
+    width: 20px;
+    height: 20px;
     left: 20%;
     animation-duration: 5s;
     animation-delay: 1s;
+
 }
 
 .bubble:nth-child(3) {
-    width: 5vw;
-    height: 5vw;
+    width: 50px;
+    height: 50px;
     left: 35%;
     animation-duration: 7s;
     animation-delay: 2s;
 }
 
 .bubble:nth-child(4) {
-    width: 8vw;
-    height: 8vw;
+    width: 80px;
+    height: 80px;
     left: 50%;
     animation-duration: 11s;
     animation-delay: 0s;
 }
 
 .bubble:nth-child(5) {
-    width: 3.5vw;
-    height: 3.5vw;
-    left: 55%;
+    width: 35px;
+    height: 35px;
+    left: 555%;
     animation-duration: 6s;
     animation-delay: 1s;
 }
 
 .bubble:nth-child(6) {
-    width: 4.5vw;
-    height: 4.5vw;
+    width: 45px;
+    height: 45px;
     left: 65%;
     animation-duration: 8s;
     animation-delay: 3s;
 }
 
 .bubble:nth-child(7) {
-    width: 9vw;
-    height: 9vw;
+    width: 90px;
+    height: 90px;
     left: 70%;
     animation-duration: 12s;
     animation-delay: 2s;
 }
 
 .bubble:nth-child(8) {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 25px;
+    height: 25px;
     left: 80%;
     animation-duration: 6s;
     animation-delay: 2s;
 }
 
 .bubble:nth-child(9) {
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 15px;
+    height: 15px;
     left: 70%;
     animation-duration: 5s;
     animation-delay: 1s;
 }
 
 .bubble:nth-child(10) {
-    width: 9vw;
-    height: 9vw;
+    width: 90px;
+    height: 90px;
     left: 25%;
     animation-duration: 10s;
     animation-delay: 4s;
@@ -228,18 +234,17 @@ footer {
 
 @keyframes rise {
     0% {
-        bottom: -10vh;
+        bottom: -100px;
         transform: translateX(0);
     }
     50% {
-        transform: translate(10vw);
+        transform: translate(100px);
     }
     100% {
-        bottom: 100vh;
-        transform: translateX(-20vw);
+        bottom: 550vh;
+        transform: translateX(-200px);
     }
 }
-
 
 .fish {
     position: absolute;
@@ -247,37 +252,36 @@ footer {
     left: 0;
     z-index: 2;
 }
-
-.fish img {
+.fish img{
     height: 10rem;
     margin-bottom: 50px;
 }
 
 #fish1 {
-    
-    animation: swim 10s linear infinite;
+    bottom:92rem;
+    animation: swim 10s linear infinite ;
 }
 
 #fish2 {
-    
+    bottom:52rem;
     transform: rotateY(180deg);
-    animation: swim-reverse 13s linear infinite;
+    animation: swim-reverse 13s linear infinite ;
 }
 
-#white-shark {
-    
-    animation: shark-swim 15s linear infinite;
+#white-shark{
+    bottom:52rem;
+    animation: shark-swim 15s linear infinite ;
 }
 
-#fish3 {
-    
-    animation: swim 15s linear infinite;
+#fish3 {    
+    bottom:10rem;
+    animation: swim 15s linear infinite ;
 }
-
-#squid-img {
+#squid-img{
     height: 10rem;
-    animation: squid-swim 15s linear infinite;
+    animation: squid-swim 15s linear infinite ;
 }
+
 
 @keyframes swim {
     0% {
