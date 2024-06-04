@@ -1,5 +1,5 @@
 function abrirNav() {
-    document.getElementById("menuLateral").style.width = "250px";
+    document.getElementById("menuLateral").style.width = "15rem";
     document.querySelector('nav').classList.add("nav-hidden");
 }
 

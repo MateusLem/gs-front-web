@@ -1,100 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Meta tags essenciais para codificação e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLUE RECKON</title>
+    <!-- Importação de folhas de estilo -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <!-- Script JavaScript -->
     <script src="./script.js" defer></script>
 </head>
 <body>
+    <!-- Cabeçalho da página -->
     <header>
         <nav>
+            <!-- Logo do Projeto com link para a página inicial -->
             <a href="./index.html"><img src="./img/lg-bluereckon.png" alt="Logo do Projeto" class="logo"></a>
-            <div class="button" onclick="abrirNav()">
+            <!-- Botão de menu para navegação lateral -->
+            <button onclick="abrirNav()">
                 <img src="https://img.icons8.com/?size=100&id=68555&format=png&color=000000" alt="Botão de menu">
-            </div>
+            </button>
         </nav>
-        <div id="menuLateral" class="menu-lateral">
+        <!-- Menu lateral de navegação -->
+        <aside  id="menuLateral" class="menu">
             <a href="javascript:void(0)" class="closebtn" onclick="fecharNav()">&times;</a>
             <a href="#problema">Problema</a>
             <a href="#tecnologia">Tecnologia</a>
             <a href="#objetivo">Objetivo</a>
-            <a href="#publico">Publico</a>
-            <a href="#beneficios">Beneficios</a>
+            <a href="#publico">Público</a>
+            <a href="#beneficios">Benefícios</a>
             <a href="#impacto">Impacto</a>
-        </div>
-        <img src="./img/surface.jpg" alt="">
+        </aside>
     </header>
+    
+    <!-- Conteúdo principal da página -->
     <main>
-        <div class="sea-animation">
+        <!-- Seção de animação do mar -->
+        <section class="sea-animation">
+            <!-- Animação dos peixes -->
+            <div class="fish" id="fish1">
+                <img src="./img/cardume-top.png" alt="Cardume de Peixes Topo">
+            </div>
+            <div class="fish" id="fish2">
+                <img src="./img/cardume-mid.png" alt="Cardume de Peixes Meio">
+            </div>
+            <div class="fish" id="fish3">
+                <img src="./img/cardume-bot.png" alt="Cardume de Peixes Fundo">
+            </div>
+            <div class="fish" id="white-shark">
+                <img src="./img/shark-silhouette.png" alt="Silhueta de Tubarão">
+            </div>
+            <div class="fish" id="squid">
+                <img id="squid-img" src="./img/squid1.png" alt="Lula">
+            </div>
+            <!-- Animação das bolhas -->
+            <div class="bubbles">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+            </div>
+            <!-- Conteúdo textual -->
             <section class="content">
-                <section class="content-section" id="problema">
-                    <div class="fish" id="fish1"><img src="./img/cardume-top.png" ></div>
-                    <div>
-                        <h1>PROBLEMA</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, impedit porro quae quaerat necessitatibus repellat labore delectus dolor natus nostrum ducimus mollitia sequi soluta, repudiandae perspiciatis commodi accusamus sunt. Maiores.</p>
-                    </div>
-                </section>
-                <section class="content-section" id="tecnologia">
-                    <div>
-                        <h1 class="section-title" id="tec-title">TECNOLOGIA</h1>
-                        <img src="./img/arduino.jpg" alt="Arduino sobre projetos">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore asperiores voluptate deleniti unde! Sit minus pariatur illum enim vitae eum accusantium corrupti hic est. Aliquid quasi labore accusamus voluptates quas.</p>
-                    </div>
-
-                </section>
-
-                <section class="content-section" id="objetivo">
-                    <div>
-                        <h1>OBJETIVO</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus perferendis possimus in quae non quas sequi quibusdam, tempora dignissimos dolorum inventore quod fuga blanditiis numquam accusantium sed deserunt provident minus!</p>
-                    </div>
-                </section>
-
-                <section class="content-section" id="publico">
-                    <div>
-                        <h1>PUBLICO</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos optio non dignissimos magnam autem tenetur labore officiis unde, ea itaque ad cupiditate? Nam facere consequatur rerum maiores totam sunt?</p>
-                    </div>
-
-                </section>
-                <div class="fish" id="white-shark"><img src="./img/shark-silhouette.png" ></div>
-                <div class="fish" id="fish2"><img src="./img/cardume-mid.png" ></div>
-                <section class="content-section" id="beneficios">
-                    <div>
-                        <h1>BENEFICIOS</h1>
-                        <img src="./img/cardume.jpg" alt="Cardume de peixes">
-                    </div>
-
-                </section>
-
-                <section class="content-section" id="impacto">
-                    <div>
-                        <h1>IMPACTO NO DIA A DIA</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eveniet, tempore provident repudiandae veniam doloremque fugit quas? Maxime debitis soluta nisi, consectetur possimus harum necessitatibus saepe fugiat assumenda, id ratione.</p>
-                    </div>
-                </section>
-                <div class="fish" id="squid">
-                    <img id="squid-img" src="./img/squid1.png" >
-                </div>
-                <section class="bubbles">
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                </section>
+                <article class="content-section" id="problema">
+                    <h1>PROBLEMA</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, impedit porro quae quaerat necessitatibus repellat labore delectus dolor natus nostrum ducimus mollitia sequi soluta, repudiandae perspiciatis commodi accusamus sunt. Maiores.</p>
+                </article>
+                <article class="content-section" id="tecnologia">
+                    <h1 class="section-title" id="tec-title">TECNOLOGIA</h1>
+                    <img src="./img/arduino.jpg" alt="Arduino sobre projetos">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore asperiores voluptate deleniti unde! Sit minus pariatur illum enim vitae eum accusantium corrupti hic est. Aliquid quasi labore accusamus voluptates quas.</p>
+                </article>
+                <article class="content-section" id="objetivo">
+                    <h1>OBJETIVO</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus perferendis possimus in quae non quas sequi quibusdam, tempora dignissimos dolorum inventore quod fuga blanditiis numquam accusantium sed deserunt provident minus!</p>
+                </article>
+                <article class="content-section" id="publico">
+                    <h1>PÚBLICO</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eos optio non dignissimos magnam autem tenetur labore officiis unde, ea itaque ad cupiditate? Nam facere consequatur rerum maiores totam sunt?</p>
+                </article>
+                <article class="content-section" id="beneficios">
+                    <h1>BENEFÍCIOS</h1>
+                    <img src="./img/cardume.jpg" alt="Cardume de peixes">
+                </article>
+                <article class="content-section" id="impacto">
+                    <h1>IMPACTO NO DIA A DIA</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eveniet, tempore provident repudiandae veniam doloremque fugit quas? Maxime debitis soluta nisi, consectetur possimus harum necessitatibus saepe fugiat assumenda, id ratione.</p>
+                </article>
             </section>
-        </div>
-     </main>
+        </section>
+    </main>
+    
+    <!-- Rodapé da página -->
     <footer>
         <p>Colaboradores: Nome1, Nome2, Nome3</p>
     </footer>
-    </body>
+  </body>
 </html>
+
