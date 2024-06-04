@@ -1,3 +1,4 @@
+/* Remove margens e espaçamentos padrões, centraliza o texto e define cor do texto */
 * {
     margin: 0;
     padding: 0;
@@ -5,24 +6,28 @@
     color: white;
 }
 
-body, html {
+/* Define dimensões da tela */
+html {
     width: 100%;
     height: 100%;
-    
 }
-body{
+
+/* Define flexbox para organizar o conteúdo em colunas */
+body {
     display: flex;
     flex-direction: column;
 }
 
-main {
+/* Define imagem de fundo no header, cobrindo toda a área */
+header {
+    background-image: url("../img/surface.jpg");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, #013f3a, #120b30);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-bottom: 100vh;
 }
 
+/* Define estilo do menu de navegação fixo no topo */
 nav {
     position: fixed;
     display: flex;
@@ -35,47 +40,81 @@ nav {
     background-color: rgba(141, 173, 233, 0.161);
 }
 
+/* Define estilo do menu lateral */
+.menu {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Define estilo dos links no menu lateral */
+.menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Define estilo dos links ao passar o mouse */
+.menu a:hover {
+    color: #f1f1f1;
+}
+
+/* Define estilo do botão de fechar o menu lateral */
+.menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Define estilo da logo */
 .logo {
     width: fit-content;
     height: 5rem;
     padding: 1rem;
 }
 
-.button {
+/* Remove borda e define o botão de menu como transparente */
+button {
     height: fit-content;
     justify-content: center;
-    padding: 1rem;
+    border: 0;
+    background: transparent;
 }
 
-.nav-hidden {
-    display: none;
-}
-
-img {
-    width: 100%;
-}
-
-header {
-    width: 100%;
-    height: fit-content;
+/* Define estilo do main, incluindo fundo e alinhamento do conteúdo */
+main {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, #013f3a, #120b30);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    z-index: 2;
-    background-size: cover;
-    background-position: center;
+    align-items: center;
 }
-.content{
+
+/* Define estilo do conteúdo principal */
+.content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-
-.content-section div {
+/* Define estilo das seções dentro do conteúdo principal */
+.content-section section {
     z-index: 3;
 }
 
+/* Define estilo das seções de conteúdo */
 .content-section {
     display: flex;
     flex-direction: column;
@@ -88,291 +127,11 @@ header {
     z-index: 2;
 }
 
+/* Define estilo do rodapé */
 footer {
     background-image: linear-gradient(to bottom, #120b30, #9c916a);
-    padding: 10px 0px;
+    padding: 10px 0;
     width: 100%;
     align-items: center;
     height: 10rem;
-}
-
-.menu-lateral {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.menu-lateral a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.menu-lateral a:hover {
-    color: #f1f1f1;
-}
-
-.menu-lateral .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-.sea-animation {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-}
-
-.bubble {
-    position: relative;
-    bottom: -100px;
-    width: 40px;
-    height: 40px;
-    background: #f1f1f1;
-    border-radius: 50%;
-    opacity: 0.5;
-    animation: rise 20s infinite ease-in;
-}
-
-.bubble:nth-child(1) {
-    width: 40px;
-    height: 40px;
-    left: 10%;
-    animation-duration: 8s;
-
-}
-
-.bubble:nth-child(2) {
-    width: 20px;
-    height: 20px;
-    left: 20%;
-    animation-duration: 5s;
-    animation-delay: 1s;
-
-}
-
-.bubble:nth-child(3) {
-    width: 50px;
-    height: 50px;
-    left: 35%;
-    animation-duration: 7s;
-    animation-delay: 2s;
-}
-
-.bubble:nth-child(4) {
-    width: 80px;
-    height: 80px;
-    left: 50%;
-    animation-duration: 11s;
-    animation-delay: 0s;
-}
-
-.bubble:nth-child(5) {
-    width: 35px;
-    height: 35px;
-    left: 555%;
-    animation-duration: 6s;
-    animation-delay: 1s;
-}
-
-.bubble:nth-child(6) {
-    width: 45px;
-    height: 45px;
-    left: 65%;
-    animation-duration: 8s;
-    animation-delay: 3s;
-}
-
-.bubble:nth-child(7) {
-    width: 90px;
-    height: 90px;
-    left: 70%;
-    animation-duration: 12s;
-    animation-delay: 2s;
-}
-
-.bubble:nth-child(8) {
-    width: 25px;
-    height: 25px;
-    left: 80%;
-    animation-duration: 6s;
-    animation-delay: 2s;
-}
-
-.bubble:nth-child(9) {
-    width: 15px;
-    height: 15px;
-    left: 70%;
-    animation-duration: 5s;
-    animation-delay: 1s;
-}
-
-.bubble:nth-child(10) {
-    width: 90px;
-    height: 90px;
-    left: 25%;
-    animation-duration: 10s;
-    animation-delay: 4s;
-}
-
-@keyframes rise {
-    0% {
-        bottom: -100px;
-        transform: translateX(0);
-    }
-    50% {
-        transform: translate(100px);
-    }
-    100% {
-        bottom: 550vh;
-        transform: translateX(-200px);
-    }
-}
-
-.fish {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-}
-.fish img{
-    height: 10rem;
-    margin-bottom: 50px;
-}
-
-#fish1 {
-    bottom:92rem;
-    animation: swim 10s linear infinite ;
-}
-
-#fish2 {
-    bottom:52rem;
-    transform: rotateY(180deg);
-    animation: swim-reverse 13s linear infinite ;
-}
-
-#white-shark{
-    bottom:52rem;
-    animation: shark-swim 15s linear infinite ;
-}
-
-#fish3 {    
-    bottom:10rem;
-    animation: swim 15s linear infinite ;
-}
-#squid-img{
-    height: 10rem;
-    animation: squid-swim 15s linear infinite ;
-}
-
-
-@keyframes swim {
-    0% {
-        transform: translateX(-10vw);
-    }
-    10% {
-        transform: translateY(-25px) translateX(0vw);
-    }
-    30% {
-        transform: translateY(25px) translateX(20vw);
-    }
-    50% {
-        transform: translateY(-25px) translateX(40vw);
-    }
-    70% {
-        transform: translateY(25px) translateX(60vw);
-    }
-    80% {
-        transform: translateY(-25px) translateX(70vw);
-    }
-    100% {
-        transform: translateY(25px) translateX(120vw);
-    }
-}
-
-@keyframes swim-reverse {
-    0% {
-        transform: translateX(110vw) rotateY(180deg);
-    }
-    10% {
-        transform: translateY(-25px) translateX(100vw) rotateY(180deg);
-    }
-    30% {
-        transform: translateY(25px) translateX(80vw) rotateY(180deg);
-    }
-    50% {
-        transform: translateY(-25px) translateX(60vw) rotateY(180deg);
-    }
-    70% {
-        transform: translateY(25px) translateX(40vw) rotateY(180deg);
-    }
-    80% {
-        transform: translateY(-25px) translateX(30vw) rotateY(180deg);
-    }
-    100% {
-        transform: translateY(25px) translateX(-20vw) rotateY(180deg);
-    }
-}
-
-@keyframes shark-swim {
-    0% {
-        transform: translateX(-10vw);
-    }
-    10% {
-        transform: translateX(0vw);
-    }
-    30% {
-        transform: translateY(25px) translateX(15vw);
-    }
-    50% {
-        transform: translateX(30vw);
-    }
-    70% {
-        transform: translateY(25px) translateX(45vw);
-    }
-    80% {
-        transform: translateX(60vw);
-    }
-    100% {
-        transform: translateY(25px) translateX(100vw);
-    }
-}
-
-@keyframes squid-swim {
-    0% {
-        transform: translateX(110vw);
-    }
-    25% {
-        transform: translateX(100vw);
-    }
-    50% {
-        transform: translateX(60vw);
-    }
-    75% {
-        transform: translateX(30vw);
-    }
-    100% {
-        transform: translateX(-20vw);
-    }
-}
-
-#crx-root-main {
-    display: none !important;
 }
