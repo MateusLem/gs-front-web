@@ -69,14 +69,10 @@
                 </article>
                 <article id="tecnologia">
                     <h1 class="section-title" id="tec-title">TECNOLOGIA</h1>
-                    <div class="carrosel">
-                        <img src="./img/html5.jpg" alt="Simbolo HTML5">
-                        <img src="./img/arduino.jpg" alt="Arduino sobre projetos">
-                        <img src="./img/Python.jpg" alt="Simbolo de Python estilizado">
-                    </div>
-                        <p>Utilizaremos HTML5 para criar a plataforma da Blue Reckon.</p>
-                        <p>O Arduino será usado para realizar as medições na plataforma, utilizando sensores de temperatura, PH, entre outros pontos importantes.</p>
-                        <p>O back-end da plataforma será desenvolvido em Python, que também será utilizado para processar os dados dos sensores utilizando Databases em JSON.</p>
+                    <img src="./img/html5.jpg" alt="imagem carrossel" id="carrosselImg">
+                    <p>Utilizaremos HTML5 para criar a plataforma da Blue Reckon.</p>
+                    <p>O Arduino será usado para realizar as medições na plataforma, utilizando sensores de temperatura, PH, entre outros pontos importantes.</p>
+                    <p>O back-end da plataforma será desenvolvido em Python, que também será utilizado para processar os dados dos sensores utilizando Databases em JSON.</p>
                 </article>
                 <article id="objetivo">
                     <h1>OBJETIVO</h1>
@@ -102,9 +98,37 @@
             </section>
         </section>
     </main>
-    
     <footer>
-        <p>Colaboradores: Denise Senise, David Gabriel, Mateus da Costa Leme</p>
+        <section class="newsletter">
+            <label for="email">Digite um email para se cadastrar na nossa newsletter.</label>
+            <input type="text" name="email" placeholder="Digite um email" >
+            <button class="btn-email" onclick="newsletter()">Enviar</button>
+        </section>
+
+        <section id="colaboradores">
+            <a href="https://github.com/desenise" target="_blank">
+                <div class="colaborador">
+                    <img loading="lazy" src="https://avatars.githubusercontent.com/desenise">
+                    <p>Denise Senise</p>
+                    <p>RM 556006</p>
+                </div>
+            </a>
+            <a href="https://github.com/dav0fc" target="_blank">
+                <div class="colaborador">
+                    <img loading="lazy" src="https://avatars.githubusercontent.com/dav0fc">
+                    <p>David Gabriel Gomes Fernandes</p>
+                    <p>RM 556020</p>
+                    
+                </div>
+            </a>
+            <a href="https://github.com/MateusLem" target="_blank">
+                <div class="colaborador">
+                    <img loading="lazy" src="https://avatars.githubusercontent.com/MateusLem">
+                    <p>Mateus da Costa Leme</p>
+                    <p>RM 557803</p>
+                </div>
+            </a>
+        </section>
     </footer>
   </body>
 </html>

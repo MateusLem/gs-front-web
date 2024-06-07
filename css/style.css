@@ -5,6 +5,9 @@
     color: white;
     
 }
+a,span{
+    text-decoration: none;
+}
 
 body {
     display: flex;
@@ -61,7 +64,7 @@ nav {
 
 .menu-lateral span {
     padding: 0.5rem 0.5rem 0.5rem;
-    text-decoration: none;
+    
     font-size: 1.5625rem;
     z-index: 3;
     color: #818181;
@@ -121,22 +124,74 @@ main {
     font-size: 1.5rem;
     padding: 0.5rem;
 }
-.carrosel{
-    position: relative;
-    max-width: 1000px;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.5s ease-in-out;
-}
 img{
-    border-radius: 1rem;
     width: 80%;
+    border-radius: 1rem ;
 }
 
 footer {
-    background-image: linear-gradient(to bottom, #120b30, #9c916a);
+    background-image: linear-gradient(to bottom, #120b30, rgb(156, 145, 106));
     padding: 0.625rem 0;
     width: 100%;
     align-items: center;
     height: 10rem;
+    height: fit-content;
 }
+.newsletter {
+    width: 30%;
+    background-image: linear-gradient(to bottom, #393939, rgba(156, 145, 106, 0.5));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 34%;
+    border-radius: 1rem;
+    font-size: large;
+    padding: 0.5rem;
+    margin-bottom: 2%;
+}
+.newsletter label{
+    margin: 0.3rem;
+}
+.newsletter input{
+    align-self: center;
+    margin: 0.3rem;
+    background-color: rgba(156, 145, 106, 0.5);
+    border-radius: 1rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.5);
+    width: 50%;
+    color: white;
+}
+.newsletter input::placeholder{
+    color: white;
+}
+
+.newsletter button{
+    background-color: rgba(156, 145, 106, 0.5);
+    border-radius: 1rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.5);
+    align-self: center;
+    width: 10%;
+    cursor: pointer;
+}
+.newsletter button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#colaboradores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.colaborador {
+    padding: 2%;
+    border-radius: 5%;
+}
+.colaborador:hover{
+    background-color: #261b55;
+}
+.colaborador img{
+    border-radius: 50%;
+    border: #120b30 2px solid;
+    padding: 0;
+}
+
