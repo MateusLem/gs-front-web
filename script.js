@@ -62,4 +62,26 @@ function scrollToSection(id) {
         behavior: "smooth"
     });
 }
+
+function proximaImg() {
+    const img = document.getElementById('carrosselImg');
+    img.src = `./img/${imagesTec[position].image}`;
+    img.alt = imagesTec[position].alt;
+    
+    position++;
+    if (position >= imagesTec.length) {
+        position = 0;
+    }
+}
+
+const imagesTec = [
+    {image: "html5.jpg", alt: "Simbolo HTML5"},
+    {image: "arduino.jpg", alt: "Arduino sobre projetos"},
+    {image: "python.png", alt: "Simbolo de Python estilizado"}
+];
+let position = 0;
+
+setInterval(proximaImg, 3000);
+
+
 linksSections.forEach(item => addScrollEvent(item.link, item.section));
