@@ -170,7 +170,7 @@ footer {
     border-radius: 1rem;
     border: 0.1rem solid rgba(0, 0, 0, 0.5);
     align-self: center;
-    width: 10%;
+    width: 12%;
     cursor: pointer;
 }
 .newsletter button:hover{

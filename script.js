@@ -7,6 +7,11 @@ const linksSections = [
     {link: "linkBeneficios", section: "beneficios"},
     {link: "linkImpacto", section: "impacto"}
 ];
+const imagesTec = [
+    {image: "html5.jpg", alt: "Simbolo HTML5"},
+    {image: "arduino.jpg", alt: "Arduino sobre projetos"},
+    {image: "python.png", alt: "Simbolo de Python estilizado"}
+];
 
 // Funções para abrir e fechar o menu lateral
 function abrirNav() {
@@ -73,14 +78,13 @@ function proximaImg() {
         position = 0;
     }
 }
+function emailAlert(){
+    const email = document.getElementById('email').value;
+    alert(`Cadastrado com sucesso!!\nCheque ${email} para conferir nossas novidades!!!`);
+}
 
-const imagesTec = [
-    {image: "html5.jpg", alt: "Simbolo HTML5"},
-    {image: "arduino.jpg", alt: "Arduino sobre projetos"},
-    {image: "python.png", alt: "Simbolo de Python estilizado"}
-];
+
 let position = 0;
-
 setInterval(proximaImg, 3000);
 
 
