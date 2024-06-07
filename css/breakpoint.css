@@ -1,0 +1,42 @@
+@media (max-width: 1300px) {
+    .logo{
+        display: none;
+    }
+    nav{
+        flex-direction: row-reverse;
+    }
+    .menu-lateral span{
+        font-size: 1.25rem;
+    }
+    .content article h1,p,img,ul {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    button{
+        margin: 0;
+        transform: scale(0.75);
+    }
+    .menu-lateral span{
+        font-size: 1rem;
+    }
+    .content article h1,p,img,ul {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    button{
+        transform: scale(0.5);
+    } 
+}
+
+@media (max-width: 375px) {
+    button{
+        transform: scale(0.3);
+    }
+}
+

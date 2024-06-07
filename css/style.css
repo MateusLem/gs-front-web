@@ -1,127 +1,197 @@
-/* Remove margens e espaçamentos padrões, centraliza o texto e define cor do texto */
 * {
     margin: 0;
     padding: 0;
     text-align: center;
     color: white;
+    
+}
+a,span{
+    text-decoration: none;
 }
 
-/* Define dimensões da tela */
-html {
-    width: 100%;
-    height: 100%;
-}
-
-/* Define flexbox para organizar o conteúdo em colunas */
 body {
     display: flex;
     flex-direction: column;
 }
 
-/* Define imagem de fundo no header, cobrindo toda a área */
 header {
-    background-image: url("../img/surface.jpg");
+    background-image: url('../img/surface.jpg');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    padding-bottom: 100vh;
+    background-position: center;
+    padding-bottom: 80vh;
 }
 
-/* Define estilo do menu de navegação fixo no topo */
 nav {
     position: fixed;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     top: 0;
     height: fit-content;
-    z-index: 5;
+    z-index: 3;
     width: 100%;
-    background-color: rgba(141, 173, 233, 0.161);
+    
 }
-/* Define estilo do menu lateral */
-.menu {
-    height: 100vh;
-    width: 0;
+.logo{
+    margin: 0.5rem 0 0 0.5rem;
+    height: 60%;
+    border-radius: 1rem;
+    background-color: rgba(70, 188, 215, 0.386);
+}
 
-/* Define estilo dos links no menu lateral */
-.menu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
+.logo img{
+    width: fit-content;
+    height: 4rem;
+    padding: 1rem;   
+}
+
+
+/* Inicia fechado */
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 3.75rem;
+    cursor: default;
+    
+}
+
+.menu-lateral span {
+    padding: 0.5rem 0.5rem 0.5rem;
+    
+    font-size: 1.5625rem;
+    z-index: 3;
     color: #818181;
     display: block;
     transition: 0.3s;
 }
 
-/* Define estilo dos links ao passar o mouse */
-.menu a:hover {
+.menu-lateral span:hover {
     color: #f1f1f1;
 }
 
-/* Define estilo do botão de fechar o menu lateral */
-.menu .closebtn {
+#fechar-menu {
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    right: 1.5625rem;
+    font-size: 2.25rem;
+    margin-left: 3.125rem;
 }
 
-/* Define estilo da logo */
-.logo {
-    width: fit-content;
-    height: 5rem;
-    padding: 1rem;
-}
-
-/* Remove borda e define o botão de menu como transparente */
 button {
+    margin: 0.5rem 0.5rem;
     height: fit-content;
     justify-content: center;
     border: 0;
     background: transparent;
 }
 
-/* Define estilo do main, incluindo fundo e alinhamento do conteúdo */
 main {
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, #013f3a, #120b30);
+    background-image: linear-gradient(to bottom, #013f3a, #261b55);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Define estilo do conteúdo principal */
 .content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-/* Define estilo das seções dentro do conteúdo principal */
-.content-section section {
-    z-index: 3;
-}
-
-/* Define estilo das seções de conteúdo */
-.content-section {
+.content article {
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: rgba(92, 215, 219, 0.2);
     width: 60%;
-    padding: 10px;
+    padding: 1.5rem;
     align-self: center;
-    margin-top: 25%;
-    z-index: 2;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
-/* Define estilo do rodapé */
+.content article h1,p,img,ul {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+img{
+    width: 80%;
+    border-radius: 1rem ;
+}
+
 footer {
-    background-image: linear-gradient(to bottom, #120b30, #9c916a);
-    padding: 10px 0;
+    background-image: linear-gradient(to bottom, #120b30, rgb(156, 145, 106));
+    padding: 0.625rem 0;
     width: 100%;
     align-items: center;
     height: 10rem;
+    height: fit-content;
 }
+.newsletter {
+    width: 30%;
+    background-image: linear-gradient(to bottom, #393939, rgba(156, 145, 106, 0.5));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 34%;
+    border-radius: 1rem;
+    font-size: large;
+    padding: 0.5rem;
+    margin-bottom: 2%;
+}
+.newsletter label{
+    margin: 0.3rem;
+}
+.newsletter input{
+    align-self: center;
+    margin: 0.3rem;
+    background-color: rgba(156, 145, 106, 0.5);
+    border-radius: 1rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.5);
+    width: 50%;
+    color: white;
+}
+.newsletter input::placeholder{
+    color: white;
+}
+
+.newsletter button{
+    background-color: rgba(156, 145, 106, 0.5);
+    border-radius: 1rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.5);
+    align-self: center;
+    width: 12%;
+    cursor: pointer;
+}
+.newsletter button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#colaboradores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.colaborador {
+    padding: 2%;
+    border-radius: 5%;
+}
+.colaborador:hover{
+    background-color: #261b55;
+}
+.colaborador img{
+    border-radius: 50%;
+    border: #120b30 2px solid;
+    padding: 0;
+}
+
