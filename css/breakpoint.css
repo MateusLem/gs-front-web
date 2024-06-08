@@ -12,6 +12,11 @@
         font-size: 1rem;
         padding: 0.5rem;
     }
+    .newsletter{
+        width: 60%;
+        margin: 0 20%;
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -26,17 +31,28 @@
         font-size: 0.75rem;
         padding: 0.5rem;
     }
+    .newsletter button{
+        width: 20%;
+    }
 }
 
 @media (max-width: 425px) {
-    button{
+    nav button{
         transform: scale(0.5);
-    } 
+    }     
+    .newsletter button{
+        width: 30%;
+    }
+    .newsletter input{
+        width: 60%;
+    }
 }
 
 @media (max-width: 375px) {
-    button{
+    nav button{
         transform: scale(0.3);
     }
+
+
 }
 
